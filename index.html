@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Risque&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="cloud-container">
+        <div class="cloud">
+          <p class="cloud-text">How how how !!! <br>
+          Like it? <br>
+          Scroll down for more !</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <nav class="navigation">
+          <div class="nav-container">
+            <a href="#" class="navigation-home-link">
+              <img
+                src="./img/Coca-Cola_logo_white 1.png"
+                alt="logo image"
+                class="navigation-home-link-image"
+              />
+            </a>
+            <ul class="navigation-list list">
+              <li class="navigation-list_item">
+                <a href="#" class="navigation-list_link">Main</a>
+                <div class="animated-words">
+                  <a href="#" class="animated">Main</a>
+                </div>
+              </li>
+              <li class="navigation-list_item">
+                <a href="#" class="navigation-list_link">About</a>
+                <div class="animated-words">
+                  <a href="#" class="animated">About</a>
+                </div>
+              </li>
+              <li class="navigation-list_item">
+                <a href="#" class="navigation-list_link">Products</a>
+                <div class="animated-words">
+                  <a href="#" class="animated">Products</a>
+                </div>
+              </li>
+              <li class="navigation-list_item">
+                <a href="#" class="navigation-list_link">Contacts</a>
+                <div class="animated-words">
+                  <a href="#" class="animated">Contacts</a>
+                </div>
+              </li>
+            </ul>
+            <div class="circle sticky-nav">
+              <div class="burger" id="sandwichmenu">
+                <svg viewBox="0 0 800 600">
+                  <path
+                    d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                    class="top"
+                  ></path>
+                  <path d="M300,320 L540,320" class="middle"></path>
+                  <path
+                    d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                    class="bottom"
+                    transform="translate(480, 320) scale(1, -1) translate(-480, -318) "
+                  ></path>
+                </svg>
+              </div>
+              <ul class="burger-navigation">
+                <li class="burger-navigation_item">
+                  <a href="#" class="burger-navigation_link">Main</a>
+                  <div class="animated-words">
+                    <a href="#" class="animated">Main</a>
+                  </div>
+                </li>
+                <li class="burger-navigation_item">
+                  <a href="#" class="burger-navigation_link">About</a>
+                </li>
+                <li class="burger-navigation_item">
+                  <a href="#" class="burger-navigation_link">Products</a>
+                </li>
+                <li class="burger-navigation_item">
+                  <a href="#" class="burger-navigation_link">Contacts</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          
+        </nav>
+
+        <div class="header-about">
+          <h1 class="header-about__main-text">Main Site Title</h1>
+          <p class="header-about__heading">Lorem ipsum descripsum</p>
+          <button class="header-about__button">Call to action</button>
+        </div>
+      </div>
+      <div class="snow">
+        <img src="https://cdn.pixabay.com/photo/2019/12/19/17/45/snowflake-4706739_1280.png" alt="" class="snowflake">
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+      <div class="products-container">
+        <div class="products-types">
+          <h2 class="products-types_heading">
+            At least somewhere you can feel new year atmosphere
+          </h2>
+          <p class="products-types_text">Choose your present:</p>
+          <ul class="products-list list">
+            <li
+              class="products-list_item socks products-list_item--active"
+              data-name="Best sock ever"
+              data-img="../img/new-year-sock1.png"
+              data-text="Regular sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting industry. Lorem"
+            ></li>
+            <li
+              class="products-list_item cap"
+              data-name="Best cap ever"
+              data-img="../img/caps-21.png"
+              data-text="Regular cap is not from Harry Potter Lorem Ipsum is simply dumm y text of the printing and types etting industry. Lorem"
+            ></li>
+            <li
+              class="products-list_item bag"
+              data-name="Best bag ever"
+              data-img="../img/new-year-bag1.png"
+              data-text="Regular bag have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting industry. Lorem"
+            ></li>
+          </ul>
+        </div>
+        <div class="products-description">
+          <div class='description-text-container'>
+            <p class="description_heading">Best sock ever</p>
+                      <p class="description_text">
+                        Regular sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting industry. Lorem
+                      </p>
+                    </div>
+                    <div class="products-description-image" style="background-image: url('../img/new-year-sock1.png')"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <h3 class="footer-title">
+        Write us <br>
+   for real presents
+      </h3>
+      <form action="" class="form">
+        <input type="text" placeholder="Name" class='form-input'>
+        <input type="tel" placeholder="Phone" class='form-input'>
+        <select name="select" id="" class="form-input select">
+          <option>Gender</option>
+        </select>
+        <input type="email" placeholder="Email" class='form-input'>
+        <textarea name="textarea" class="form-input textarea" id="" cols="30" rows="10" placeholder="Your wish"></textarea>
+        
+        <label for="present" class='checkbox-label'><input type="checkbox" id='present'>
+          <span class="pseudocheckbox"></span>Whant Coca-cola with present ?</label>
+      </form>
+    </div>
+
+  </footer>
+    <script src="js/main.js" type="module"></script>
+    <!-- <script type="text/javascript" src="js/snowfall.js"></script> -->
+  </body>
+</html>
