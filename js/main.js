@@ -74,20 +74,20 @@ function createDot(x, y) {
   return elem;
 }
 
-// let Count_Num_Of_Dots = 0;
+let Count_Num_Of_Dots = 0;
 
-// function addDot() {
-//   if (Count_Num_Of_Dots < 80) {
-//     createDot(
-//       Math.floor(Math.random() * document.body.offsetWidth),
-//       Math.floor(Math.random() * document.body.offsetHeight)
-//     );
-//     Count_Num_Of_Dots++;
-//   } else {
-//     clearInterval(My_Timer_Var);
-//   }
-// }
+function addDot() {
+  if (Count_Num_Of_Dots < 80) {
+    createDot(
+      Math.floor(Math.random() * document.body.offsetWidth),
+      Math.floor(Math.random() * document.body.offsetHeight)
+    );
+    Count_Num_Of_Dots++;
+  } else {
+    clearInterval(My_Timer_Var);
+  }
+}
 
-// var My_Timer_Var = setInterval(function () {
-//   addDot();
-// }, 0.05);
+var My_Timer_Var = setInterval(function () {
+  addDot();
+}, 0.05);
