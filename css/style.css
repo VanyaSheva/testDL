@@ -26,18 +26,20 @@ body {
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 55%;
+  transform: translateX(-50%);
   text-align: center;
   color: black;
 }
 .cloud {
   text-align: start;
-  padding: 53px 14px 57px 35px;
   background-image: url("../img/Cloud.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 259.58px;
-  height: 166.11px;
+  width: 266.58px;
+  height: 190.11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cloud-text {
   font-weight: normal;
@@ -391,7 +393,7 @@ main {
 .products-description-image {
   width: 150px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 120px;
   background-position: center center;
 }
 
@@ -502,11 +504,9 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   }
 }
 
-@media (min-width: 320px) and (max-width: 764px) {
+@media (min-width: 320px) and (max-width: 964px) {
   header {
     background-size: contain;
-  }
-  header {
     background-position: center bottom;
   }
   .wrapper {
@@ -525,16 +525,6 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     max-width: 764px;
     width: 100%;
     justify-content: space-between;
-  }
-
-  .navigation-list {
-    display: none;
-  }
-  .snow {
-    display: none;
-  }
-  .cloud {
-    display: none;
   }
   .header-about {
     padding-top: 130px;
@@ -619,5 +609,31 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   }
   .form-input {
     max-width: 764px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1149px) {
+  .navigation-list {
+    display: none;
+  }
+  .snow {
+    display: none;
+  }
+  .cloud {
+    display: none;
+  }
+}
+@media (min-width: 558px) and (max-width: 965px) {
+  header {
+    height: 900px;
+  }
+}
+@media (min-width: 965px) and (max-width: 1096px) {
+  .products-list {
+    max-width: 425px;
+  }
+  .products-list_item {
+    width: 121px;
+    height: 121px;
+    background-size: contain;
   }
 }
