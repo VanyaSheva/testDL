@@ -525,6 +525,9 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   .header-about__button {
     margin-bottom: 393px;
   }
+  .dot {
+    z-index: 0;
+  }
   .circle {
     right: 50px;
   }
