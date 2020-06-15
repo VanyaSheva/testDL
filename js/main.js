@@ -64,8 +64,6 @@ function markup(heading, text, image) {
   `;
 }
 
-function insertMarkup() {}
-
 function createDot(x, y) {
   const elem = document.createElement("div");
   elem.setAttribute("class", "dot");
@@ -77,17 +75,56 @@ function createDot(x, y) {
 let Count_Num_Of_Dots = 0;
 
 function addDot() {
-  if (Count_Num_Of_Dots < 80) {
-    createDot(
-      Math.floor(Math.random() * document.body.offsetWidth),
-      Math.floor(Math.random() * document.body.offsetHeight)
-    );
-    Count_Num_Of_Dots++;
+  if (document.body.offsetWidth < 764) {
+    if (Count_Num_Of_Dots < 15) {
+      createDot(
+        Math.floor(Math.random() * document.body.offsetWidth),
+        Math.floor(Math.random() * document.body.offsetHeight)
+      );
+      Count_Num_Of_Dots++;
+    } else {
+      clearInterval(My_Timer_Var);
+    }
+  }
+  if (document.body.offsetWidth > 764 && document.body.offsetWidth < 1000) {
+    if (Count_Num_Of_Dots < 25) {
+      createDot(
+        Math.floor(Math.random() * document.body.offsetWidth),
+        Math.floor(Math.random() * document.body.offsetHeight)
+      );
+      Count_Num_Of_Dots++;
+    } else {
+      clearInterval(My_Timer_Var);
+    }
   } else {
-    clearInterval(My_Timer_Var);
+    if (Count_Num_Of_Dots < 35) {
+      createDot(
+        Math.floor(Math.random() * document.body.offsetWidth),
+        Math.floor(Math.random() * document.body.offsetHeight)
+      );
+      Count_Num_Of_Dots++;
+    } else {
+      clearInterval(My_Timer_Var);
+    }
   }
 }
 
 var My_Timer_Var = setInterval(function () {
   addDot();
 }, 0.05);
+
+docSlider.init({
+  speed: 600,
+  startSpeed: null,
+  easing: "ease",
+  pager: false,
+});
+
+const button = document.querySelector(".scroll-button");
+
+button.addEventListener("click", handleButtonClick);
+
+function handleButtonClick() {
+  console.log("hi");
+  docSlider.nextPage(600, "ease");
+}

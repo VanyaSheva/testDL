@@ -9,7 +9,6 @@ body {
   background-color: #141429;
   color: #fff;
   font-family: "Risque", cursive;
-  overflow-x: hidden;
 }
 .list {
   list-style: none;
@@ -72,16 +71,6 @@ body {
   }
 }
 
-.dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #fff;
-  z-index: 1;
-  -webkit-animation: blink 1s linear infinite;
-  animation: blink 1s linear infinite;
-}
 header {
   position: relative;
   background-image: url("../img/dedcoca2.png");
@@ -89,7 +78,17 @@ header {
   background-position: right 200px;
   background-size: 775px;
   height: 700px;
+  z-index: 3;
+}
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
   z-index: 2;
+  -webkit-animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
 }
 .navigation {
   display: flex;
@@ -97,6 +96,8 @@ header {
   justify-content: space-between;
   max-width: 1343px;
   width: 100%;
+  padding: 10px;
+  z-index: 4;
 }
 .nav-container {
   display: flex;
@@ -164,6 +165,7 @@ header {
   position: absolute;
   transform: translate(50%, -50%);
   top: 50%;
+  z-index: 1000;
 }
 
 .burger {
@@ -274,6 +276,7 @@ svg:not(:root) {
   font-size: 16px;
   cursor: pointer;
   transition: 0.2s ease-in;
+  margin-bottom: 100px;
 }
 .header-about__button:hover {
   border-radius: 20px 0px 20px 0px;
@@ -297,12 +300,22 @@ svg:not(:root) {
 }
 .snowflake {
   display: block;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   animation: 10s linear 0s normal none infinite running rotate;
   transform-origin: center center;
 }
-
+.scroll-button {
+  width: 34px;
+  height: 34px;
+  background-image: url("../img/Arrow\ 2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 150px;
+}
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -468,68 +481,35 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
 ::placeholder {
   color: #fff;
 }
-@media (min-width: 320px) and (max-width: 450px) {
-  .navigation-home-link-image {
-    width: 138px;
-    height: 55px;
-  }
-  .circle {
-    width: 55px;
-    height: 55px;
-  }
-  .burger {
-    width: 55px;
-    height: 55px;
-  }
-  .circle-open {
-    width: 400px;
-    height: 400px;
-  }
-  .header-about__main-text {
-    font-size: 43px;
-  }
-  .header-about__heading {
-    font-size: 23px;
-  }
-  .header-about__button {
-    margin-bottom: 270px;
-  }
-  .products-types_heading {
-    font-size: 37px;
-  }
-  .products-list_item {
-    width: 80px;
-    height: 80px;
-    background-size: contain;
-  }
-}
-
 @media (min-width: 320px) and (max-width: 964px) {
   header {
     background-size: contain;
     background-position: center bottom;
   }
+  main {
+    background-position: right bottom;
+  }
   .wrapper {
-    max-width: 764px;
+    max-width: 964px;
     width: 100%;
     margin: 0 auto;
     padding: 0 25px;
   }
   .navigation {
-    max-width: 764px;
+    max-width: 964px;
     width: 100%;
   }
   .nav-container {
     display: flex;
     align-items: center;
-    max-width: 764px;
+    max-width: 964px;
     width: 100%;
     justify-content: space-between;
   }
   .header-about {
-    padding-top: 130px;
     display: flex;
     flex-direction: column;
+    max-height: 400px;
   }
   .header-about__main-text {
     font-size: 52px;
@@ -546,17 +526,11 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     margin-bottom: 393px;
   }
   .circle {
-    right: 75px;
+    right: 50px;
   }
   .circle-open {
     width: 700px;
     height: 700px;
-  }
-  .burger-navigation_item {
-    margin-bottom: 20px;
-  }
-  .burger-navigation_link {
-    font-size: 22px;
   }
   .products-container {
     display: block;
@@ -596,7 +570,8 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     width: 100%;
   }
   .products-description-image {
-    height: 150px;
+    height: 170px;
+    background-size: 90px;
   }
   .image {
     order: 1;
@@ -621,6 +596,9 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   .cloud {
     display: none;
   }
+  .scroll-button {
+    display: none;
+  }
 }
 @media (min-width: 558px) and (max-width: 965px) {
   header {
@@ -634,6 +612,44 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   .products-list_item {
     width: 121px;
     height: 121px;
+    background-size: contain;
+  }
+}
+@media (min-width: 320px) and (max-width: 450px) {
+  .navigation-home-link-image {
+    width: 138px;
+    height: 55px;
+  }
+  .circle {
+    width: 55px;
+    height: 55px;
+  }
+  .burger {
+    width: 55px;
+    height: 55px;
+  }
+  .circle-open {
+    width: 500px;
+    height: 500px;
+  }
+  .burger-navigation_item {
+    margin-bottom: 10px;
+  }
+  .burger-navigation_link {
+    font-size: 20px;
+  }
+  .header-about__main-text {
+    font-size: 43px;
+  }
+  .header-about__heading {
+    font-size: 23px;
+  }
+  .products-types_heading {
+    font-size: 37px;
+  }
+  .products-list_item {
+    width: 80px;
+    height: 80px;
     background-size: contain;
   }
 }
