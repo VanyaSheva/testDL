@@ -481,7 +481,7 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
 ::placeholder {
   color: #fff;
 }
-@media (min-width: 320px) and (max-width: 964px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   header {
     background-size: contain;
     background-position: center bottom;
@@ -557,7 +557,7 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     margin: 0 auto;
   }
   .products-list {
-    max-width: 764px;
+    max-width: 1024px;
     width: 100%;
   }
   .products-list_item {
@@ -607,9 +607,6 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   }
 }
 @media (min-width: 965px) and (max-width: 1096px) {
-  .products-list {
-    max-width: 425px;
-  }
   .products-list_item {
     width: 121px;
     height: 121px;
