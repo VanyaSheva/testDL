@@ -20,6 +20,7 @@ body {
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
+  height: 100vh;
 }
 .cloud-container {
   opacity: 0;
@@ -75,9 +76,8 @@ header {
   position: relative;
   background-image: url("../img/dedcoca2.png");
   background-repeat: no-repeat;
-  background-position: right 200px;
+  background-position: bottom right;
   background-size: 775px;
-  height: 700px;
   z-index: 3;
 }
 .dot {
@@ -415,7 +415,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 180px 0;
+  padding-top: 180px;
 }
 .footer-title {
   font-weight: normal;
@@ -522,9 +522,7 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   .header-about__button {
     margin: 0 auto;
   }
-  .header-about__button {
-    margin-bottom: 393px;
-  }
+
   .dot {
     z-index: 0;
   }

@@ -86,3 +86,4 @@ body:active,
 .docSlider-button.selected {
   opacity: 1;
 }
+/* @media (min-width: 320px) and (max-width: 964px) { */
