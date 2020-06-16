@@ -281,8 +281,8 @@ svg:not(:root) {
   margin-bottom: 100px;
 }
 .header-about__button:hover {
-  border-radius: 20px 0px 20px 0px;
-  border: 2px solid #ffffffc0;
+  background-color: white;
+  color: #141429;
 }
 .header-main-image {
   display: block;
