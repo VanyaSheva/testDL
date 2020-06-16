@@ -64,54 +64,54 @@ function markup(heading, text, image) {
   `;
 }
 
-// function createDot(x, y) {
-//   const elem = document.createElement("div");
-//   elem.setAttribute("class", "dot");
-//   elem.setAttribute("style", "left:" + x + "px;top:" + y + "px;");
-//   document.getElementsByTagName("body")[0].appendChild(elem);
-//   return elem;
-// }
+function createDot(x, y) {
+  const elem = document.createElement("div");
+  elem.setAttribute("class", "dot");
+  elem.setAttribute("style", "left:" + x + "px;top:" + y + "px;");
+  document.getElementsByTagName("body")[0].appendChild(elem);
+  return elem;
+}
 
-// let Count_Num_Of_Dots = 0;
+let Count_Num_Of_Dots = 0;
 
-// function addDot() {
-//   if (document.body.offsetWidth < 764) {
-//     if (Count_Num_Of_Dots < 15) {
-//       createDot(
-//         Math.floor(Math.random() * document.body.offsetWidth),
-//         Math.floor(Math.random() * document.body.offsetHeight)
-//       );
-//       Count_Num_Of_Dots++;
-//     } else {
-//       clearInterval(My_Timer_Var);
-//     }
-//   }
-//   if (document.body.offsetWidth > 764 && document.body.offsetWidth < 1000) {
-//     if (Count_Num_Of_Dots < 25) {
-//       createDot(
-//         Math.floor(Math.random() * document.body.offsetWidth),
-//         Math.floor(Math.random() * document.body.offsetHeight)
-//       );
-//       Count_Num_Of_Dots++;
-//     } else {
-//       clearInterval(My_Timer_Var);
-//     }
-//   } else {
-//     if (Count_Num_Of_Dots < 35) {
-//       createDot(
-//         Math.floor(Math.random() * document.body.offsetWidth),
-//         Math.floor(Math.random() * document.body.offsetHeight)
-//       );
-//       Count_Num_Of_Dots++;
-//     } else {
-//       clearInterval(My_Timer_Var);
-//     }
-//   }
-// }
+function addDot() {
+  if (document.body.offsetWidth < 764) {
+    if (Count_Num_Of_Dots < 15) {
+      createDot(
+        Math.floor(Math.random() * document.body.offsetWidth),
+        Math.floor(Math.random() * document.body.offsetHeight)
+      );
+      Count_Num_Of_Dots++;
+    } else {
+      clearInterval(My_Timer_Var);
+    }
+  }
+  if (document.body.offsetWidth > 764 && document.body.offsetWidth < 1000) {
+    if (Count_Num_Of_Dots < 25) {
+      createDot(
+        Math.floor(Math.random() * document.body.offsetWidth),
+        Math.floor(Math.random() * document.body.offsetHeight)
+      );
+      Count_Num_Of_Dots++;
+    } else {
+      clearInterval(My_Timer_Var);
+    }
+  } else {
+    if (Count_Num_Of_Dots < 35) {
+      createDot(
+        Math.floor(Math.random() * document.body.offsetWidth),
+        Math.floor(Math.random() * document.body.offsetHeight)
+      );
+      Count_Num_Of_Dots++;
+    } else {
+      clearInterval(My_Timer_Var);
+    }
+  }
+}
 
-// var My_Timer_Var = setInterval(function () {
-//   addDot();
-// }, 0.05);
+var My_Timer_Var = setInterval(function () {
+  addDot();
+}, 0.05);
 
 docSlider.init({
   speed: 600,
