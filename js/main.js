@@ -64,13 +64,13 @@ function markup(heading, text, image) {
   `;
 }
 
-function createDot(x, y) {
-  const elem = document.createElement("div");
-  elem.setAttribute("class", "dot");
-  elem.setAttribute("style", "left:" + x + "px;top:" + y + "px;");
-  document.getElementsByTagName("body")[0].appendChild(elem);
-  return elem;
-}
+// function createDot(x, y) {
+//   const elem = document.createElement("div");
+//   elem.setAttribute("class", "dot");
+//   elem.setAttribute("style", "left:" + x + "px;top:" + y + "px;");
+//   document.getElementsByTagName("body")[0].appendChild(elem);
+//   return elem;
+// }
 
 // let Count_Num_Of_Dots = 0;
 

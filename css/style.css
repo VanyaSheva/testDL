@@ -73,7 +73,6 @@ body {
 }
 
 header {
-  position: relative;
   background-image: url("../img/dedcoca2.png");
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -98,6 +97,8 @@ header {
   width: 100%;
   padding: 10px;
   z-index: 4;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .nav-container {
   display: flex;
@@ -255,6 +256,7 @@ svg:not(:root) {
   transform: translate(-50%, -50%);
 }
 .header-about {
+  position: relative;
   padding-top: 230px;
 }
 .header-about__main-text {
@@ -292,10 +294,10 @@ svg:not(:root) {
 }
 .snow {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 0;
   border-radius: 50%;
-  transform: translateX(-45%);
+  transform: translate(-45%, -50%);
   z-index: -1;
 }
 .snowflake {
@@ -489,21 +491,21 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   main {
     background-position: right bottom;
   }
+
   .wrapper {
-    max-width: 964px;
+    max-width: 1024px;
     width: 100%;
     margin: 0 auto;
     padding: 0 25px;
   }
   .navigation {
-    max-width: 964px;
-    width: 100%;
+    max-width: 1024px;
   }
   .nav-container {
     display: flex;
     align-items: center;
-    max-width: 964px;
-    width: 100%;
+    max-width: 1024px;
+
     justify-content: space-between;
   }
   .header-about {
@@ -521,6 +523,7 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   }
   .header-about__button {
     margin: 0 auto;
+    height: 41px;
   }
 
   .dot {
@@ -538,6 +541,9 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     text-align: left;
     padding-top: 90px;
   }
+  .products-types {
+    max-width: 1024px;
+  }
   .products-list {
     margin-bottom: 73px;
   }
@@ -552,13 +558,11 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     border-radius: 20px;
     padding: 58px 38px 38px 35px;
     max-width: 553px;
-    width: 100%;
     padding: 0;
     margin: 0 auto;
   }
   .products-list {
     max-width: 1024px;
-    width: 100%;
   }
   .products-list_item {
     width: 111px;
@@ -568,7 +572,6 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   .description-text-container {
     order: 2;
     max-width: 553px;
-    width: 100%;
   }
   .products-description-image {
     height: 170px;
@@ -581,10 +584,10 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     font-size: 37px;
   }
   .form {
-    max-width: 764px;
+    max-width: 1024px;
   }
   .form-input {
-    max-width: 764px;
+    max-width: 1024px;
   }
 }
 @media (min-width: 320px) and (max-width: 1149px) {
@@ -601,11 +604,7 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     display: none;
   }
 }
-@media (min-width: 558px) and (max-width: 965px) {
-  header {
-    height: 900px;
-  }
-}
+
 @media (min-width: 965px) and (max-width: 1096px) {
   .products-list_item {
     width: 121px;
@@ -650,4 +649,13 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     height: 80px;
     background-size: contain;
   }
+}
+
+@media (min-width: 450px) {
+  header {
+    background-position: bottom right;
+  }
+}
+option {
+  color: #cecece;
 }

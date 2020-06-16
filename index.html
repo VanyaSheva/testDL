@@ -108,9 +108,9 @@
         <button class="scroll-button"></button>
       </div>
      
-      <!-- <div class="snow">
+      <div class="snow">
         <img src="https://cdn.pixabay.com/photo/2019/12/19/17/45/snowflake-4706739_1280.png" alt="" class="snowflake">
-      </div> -->
+      </div>
     </header>
     </section>
     <main>
@@ -157,8 +157,9 @@
   </main>
 
 
-<section id="three">
+
   <footer>
+    <section id="three">
     <div class="wrapper">
       <h3 class="footer-title">
         Write us <br>
@@ -168,7 +169,10 @@
         <input type="text" placeholder="Name" class='form-input'>
         <input type="tel" placeholder="Phone" class='form-input'>
         <select name="select" id="" class="form-input select">
-          <option>Gender</option>
+          <option value="none" hidden="">Gender</option>
+          <option value="Boy">Boy</option>
+          <option value="Girl">Girl</option>
+
         </select>
         <input type="email" placeholder="Email" class='form-input'>
         <textarea name="textarea" class="form-input textarea" id="" cols="30" rows="10" placeholder="Your wish"></textarea>
@@ -177,11 +181,12 @@
           <span class="pseudocheckbox"></span>Whant Coca-cola with present ?</label>
       </form>
     </div>
+  </section>
   </footer>
-</section>
+
 </div>
     <script src="js/main.js" type="module"></script>
-    <!-- <script type="text/javascript" src="js/snowfall.js"></script> -->
+    <script type="text/javascript" src="js/snowfall.js"></script>
     <script src="./docSlider-master/docSlider.min.js"></script>
   </body>
 </html>
