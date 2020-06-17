@@ -180,6 +180,37 @@ header {
   cursor: pointer;
   z-index: 3;
 }
+.effect-4 a:before {
+  content: "[";
+  left: -5px;
+}
+
+.effect-4 a:after {
+  content: "]";
+  right: -5px;
+}
+
+.effect-4 a:before,
+.effect-4 a:after {
+  position: absolute;
+  opacity: 0;
+  color: #fff;
+  top: -1px;
+  transition: all 0.5s;
+}
+
+.effect-4 a:hover:before,
+.effect-4 a:hover:after {
+  opacity: 0.7;
+}
+
+.effect-4 a:hover:before {
+  left: -20px;
+}
+
+.effect-4 a:hover:after {
+  right: -20px;
+}
 .burger-navigation {
   display: none;
   position: absolute;
@@ -190,6 +221,7 @@ header {
   list-style: none;
 }
 .burger-navigation_item {
+  position: relative;
   margin-bottom: 40px;
 }
 .burger-navigation_link {
@@ -197,6 +229,8 @@ header {
   font-size: 32px;
   color: #ffffff;
   text-decoration: none;
+}
+.burger-navigation_link:hover {
 }
 .burger-navigation-block {
   display: block;
@@ -404,6 +438,7 @@ main {
   font-weight: normal;
   font-size: 28px;
   line-height: 33px;
+  font-family: "Roboto", sans-serif;
 }
 .products-description-image {
   width: 150px;
@@ -441,6 +476,10 @@ footer {
   margin-bottom: 20px;
   color: #fff;
 }
+option {
+  color: #cecece;
+}
+
 .textarea {
   padding-top: 9px;
   max-width: 470px;
@@ -523,7 +562,6 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   }
   .header-about__button {
     margin: 0 auto;
-    height: 41px;
   }
 
   .dot {
@@ -557,7 +595,6 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
     border: none;
     border-radius: 20px;
     padding: 58px 38px 38px 35px;
-    max-width: 553px;
     padding: 0;
     margin: 0 auto;
   }
@@ -655,7 +692,4 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   header {
     background-position: bottom right;
   }
-}
-option {
-  color: #cecece;
 }
