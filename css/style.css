@@ -567,9 +567,6 @@ input[type="checkbox"]:checked + .pseudocheckbox::before {
   .dot {
     z-index: 0;
   }
-  .circle {
-    right: 50px;
-  }
   .circle-open {
     width: 700px;
     height: 700px;
